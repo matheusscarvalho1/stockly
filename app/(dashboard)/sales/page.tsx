@@ -1,12 +1,9 @@
 import { Button } from '@/app/_components/ui/button';
-import { db } from '../../_lib/prisma'
 import { PlusIcon } from 'lucide-react';
-import { productTableColumns } from './_components/table-columns';
-import { DataTable } from '@/app/_components/ui/data-table';
+
 
 
 const Sales = () => {
-    const products = await db.product.findMany();
     return (
         <>
             <div className="w-full space-y-8 p-8">
@@ -22,7 +19,7 @@ const Sales = () => {
                         </Button>
                     </div>   
                 </div>
-                {/* <DataTable columns={productTableColumns} data={products} /> */}
+                {/* Import table*/}
             </div>
         </> 
     );
