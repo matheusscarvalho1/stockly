@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    loggin: {
+        fetches: {
+            fullUrl: true,
+        }
+    }
+};
 
 export default nextConfig;

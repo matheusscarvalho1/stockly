@@ -2,10 +2,10 @@ import { Button } from '@/app/_components/ui/button';
 import { PlusIcon } from 'lucide-react';
 import { productTableColumns } from './_components/table-columns';
 import { DataTable } from '@/app/_components/ui/data-table';
-import { getProducts } from '@/app/_data-access/product/get-products';
+import { cachedGetProductsMemo } from '@/app/_data-access/product/get-products';
 
 export default async function Products() {
-    const products = await getProducts();
+    const products = await cachedGetProductsMemo();
 
     return (
         <div className="m-8 rounded-lg w-full space-y-8 bg-white p-8">
